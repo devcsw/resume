@@ -1,26 +1,56 @@
 <template>
-    <div class="education-section">
-      <h2>학력사항</h2>
-      <div class="education-item">
-        <h3>학교명</h3>
-        <p>전공: 컴퓨터공학</p>
-        <p>졸업년도: 20XX년</p>
-        <p>학점: 4.0/4.5</p>
-      </div>
+  <div class="experience-section">
+    <h2>경력사항</h2>
+
+    <div class="experience-item">
+      <h3>회사명: 트**주식회사</h3>
+      <p>직위/직책: 대리 / 팀원</p>
+      <p>업무: 공공기관 유지보수</p>
+      <p>근무기간: 2024.07 ~ 재직중 (5개월)</p>
     </div>
-  </template>
+    <!-- 주식회사 스토리 -->
+    <div class="experience-item">
+      <h3>회사명: 주식회사 ****리</h3>
+      <p>직위/직책: 사원 / 팀원 (2년차)</p>
+      <p>업무: 웹개발 (공공기관 홈페이지 개발 및 유지보수)</p>
+      <p>근무기간: 2022.10 ~ 2024.07 (1년 10개월)</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>회사명: 한**스템</h3>
+      <p>직위/직책: 대리</p>
+      <p>업무: 웹개발 ( 출입관리시스템 유지보수)</p>
+      <p>근무기간: 2021.11 ~ 2022.10 (1년)</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>회사명: 주식회사 ****브레</h3>
+      <p>직위/직책: 사원 / 팀원</p>
+      <p>업무: 앱개발</p>
+      <p>근무기간: 2017.12 ~ 2018.09 (11개월)</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>회사명: ****키</h3>
+      <p>직위/직책: 인턴 / 수습 / 팀원</p>
+      <p>업무: 유지보수</p>
+      <p>근무기간: 2017.05 ~ 2017.12 (8개월)</p>
+    </div>
+  </div>
+</template>
+
   
   <script setup lang="ts">
   // 여기에 필요한 스크립트 로직을 추가하세요
   </script>
   
   <style scoped>
-  .education-section {
+  .experience-section {
     padding: 20px;
     margin: 20px 0;
   }
   
-  .education-item {
+  .experience-item {
     margin-bottom: 20px;
   }
   
