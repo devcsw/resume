@@ -40,9 +40,11 @@
 </template>
 
   
-  <script setup lang="ts">
-  // 여기에 필요한 스크립트 로직을 추가하세요
-  </script>
+<script lang="ts">
+export default {
+  name: 'Experience'
+}
+</script>
   
   <style scoped>
   .experience-section {

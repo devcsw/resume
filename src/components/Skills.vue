@@ -10,8 +10,10 @@
     </div>
   </template>
   
-  <script setup lang="ts">
-  // 여기에 필요한 스크립트 로직을 추가하세요
+  <script lang="ts">
+  export default {
+    name: 'Skills'
+  }
   </script>
   
   <style scoped>
