@@ -2,78 +2,76 @@
   <div class="resume-container">
     <nav class="navbar">
       <ul>
-        <li><a href="#header">Header</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#" @click="showSection('header')">Header</a></li>
+        <li><a href="#" @click="showSection('profile')">Profile</a></li>
+        <li><a href="#" @click="showSection('experience')">Experience</a></li>
+        <li><a href="#" @click="showSection('education')">Education</a></li>
+        <li><a href="#" @click="showSection('skills')">Skills</a></li>
+        <li><a href="#" @click="showSection('projects')">Projects</a></li>
       </ul>
     </nav>
 
-    <div id="header">
+    <!-- Conditional rendering of sections -->
+    <div v-if="currentSection === 'header'" id="header">
       <Header />
     </div>
-    <div id="profile">
+    <div v-if="currentSection === 'profile'" id="profile">
       <Profile />
     </div>
-    <div id="experience">
+    <div v-if="currentSection === 'experience'" id="experience">
       <Experience />
     </div>
-    <div id="education">
+    <div v-if="currentSection === 'education'" id="education">
       <Education />
     </div>
-    <div id="skills">
+    <div v-if="currentSection === 'skills'" id="skills">
       <Skills />
     </div>
-    <div id="projects">
+    <div v-if="currentSection === 'projects'" id="projects">
       <Projects />
     </div>
   </div>
 </template>
 
-
 <script setup lang="ts">
+import { ref } from 'vue'
 import Education from './components/Education.vue'
 import Experience from './components/Experience.vue'
 import Header from './components/Header.vue'
 import Profile from './components/Profile.vue'
 import Projects from './components/Projects.vue'
 import Skills from './components/Skills.vue'
+
+const currentSection = ref('header') // Default section to be shown
+
+function showSection(section: string) {
+  currentSection.value = section
+}
 </script>
 
 <style scoped>
-.navbar {
-  background-color: #333;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-.navbar ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
-.navbar li {
-  margin: 0 10px;
-}
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-.navbar a:hover {
-  text-decoration: underline;
-}
 .resume-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
-html {
-  scroll-behavior: smooth;
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
 }
 </style>
